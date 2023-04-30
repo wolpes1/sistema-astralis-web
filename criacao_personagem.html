@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação de Personagem - Sistema Astralis RPG</title>
+    <link rel="stylesheet" href="estilo_criacao_personagem.css">
+</head>
+<body>
+    <form id ='criacao_personagem'>
+        <h1 class="titulo">Criação de Personagens</h1>
+        <br>
+        <div class="campo_texto">
+            <h2>Nome do Personagem:</h2>
+            <input type="text" class="campos_preenchimento_texto" id="campo_nome_personagem">
+        </div>
+        <br><br>
+        <div class="campo_texto">
+            <h2>Nome do Jogador:</h2>
+            <input type="text" class="campos_preenchimento_texto" id="campo_nome_jogador">
+        </div>
+        <br>
+        <h2 class="titulo">Atributos:</h2>
+        <br>
+        <div class="secao_atributos">
+            <div class="atributos">
+                <div class="campo_numero">
+                    <h3>Força:</h3>
+                    <input type="number" class="campos_preenchimento_numero" id="campo_forca_personagem">
+                </div>
+                <div class="campo_numero">
+                    <h3>Habilidade:</h3>
+                    <input type="number" class="campos_preenchimento_numero" id="campo_habilidade_personagem">
+                </div>
+            </div>
+            <br><br>
+            <div class="atributos">
+                <div class="campo_numero">
+                    <h3>Inteligência:</h3>
+                    <input type="number" class="campos_preenchimento_numero" id="campo_inteligencia_personagem">
+                </div>
+                <div class="campo_numero">
+                    <h3>Vitalidade:</h3>
+                    <input type="number" class="campos_preenchimento_numero" id="campo_vitalidade_personagem">
+                </div>
+            </div>
+            <br><br>
+            <div class="atributos">
+                <div class="campo_numero">
+                    <h3>Resistência:</h3>
+                    <input type="number" class="campos_preenchimento_numero" id="campo_resistencia_personagem">
+                </div>
+                <div class="campo_numero">
+                    <h3>Afinidade Mágica:</h3>
+                    <input type="number" class="campos_preenchimento_numero" id="campo_afinidade_personagem">
+                </div>
+            </div>
+        </div>
+    </form>
+    <br><br>
+    <button type="submit" name="enviar">Enviar</button>
+    <br><br>
+    <button type="reset" onclick="resetar()" name="resetar">Resetar</button>
+
+    <script>
+        function resetar() {
+            var formulario = document.getElementById('criacao_personagem');
+            formulario.reset()
+        }
+    </script>
+
+</body> 
+</html> 
