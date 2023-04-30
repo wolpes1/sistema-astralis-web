@@ -22,16 +22,21 @@ h1{
 }
 
 button{
-    margin: 0 auto;
-    display: block;
     width: 10em;
-    height: 3em;
+    height: 5em;
     font-family: Arial, Helvetica, sans-serif;
     font-size: larger;
     color: burlywood;
     background-color: brown;
     border-style: hidden;
     border-radius: 10px;
+    margin: 10px 10px;
+    vertical-align: top;
+}
+
+#opcoes{
+    display: flex;
+    justify-content: center;
 }
 
 button:active{

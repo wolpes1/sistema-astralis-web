@@ -90,3 +90,12 @@ button:active{
     background-color: rgba(214, 98, 15, 0.548);
     color:rgb(179, 6, 6);
 }
+
+#opcoes{
+    display: flex;
+}
+
+#opcoes #voltar{
+    position: absolute;
+    
+}
