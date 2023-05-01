@@ -16,12 +16,12 @@
         <br>
         <div class="campo_texto">
             <h2>Nome do Personagem:</h2>
-            <input type="text" class="campos_preenchimento_texto" id="campo_nome_personagem">
+            <input type="text" class="campos_preenchimento_texto" id="campo_nome_personagem" >
         </div>
         <br><br>
         <div class="campo_texto">
             <h2>Nome do Jogador:</h2>
-            <input type="text" class="campos_preenchimento_texto" id="campo_nome_jogador">
+            <input type="text" class="campos_preenchimento_texto" id="campo_nome_jogador" >
         </div>
         <br>
         <h2 class="titulo">Atributos:</h2>
@@ -30,29 +30,29 @@
             <div class="atributos">
                 <div class="campo_numero">
                     <h3>Força:</h3>
-                    <input type="number" class="campos_preenchimento_numero" id="campo_forca_personagem">
+                    <input type="number" class="campos_preenchimento_numero" id="campo_forca_personagem" >
                 </div>
                 <div class="campo_numero">
                     <h3>Habilidade:</h3>
-                    <input type="number" class="campos_preenchimento_numero" id="campo_habilidade_personagem">
+                    <input type="number" class="campos_preenchimento_numero" id="campo_habilidade_personagem" >
                 </div>
             </div>
             <br><br>
             <div class="atributos">
                 <div class="campo_numero">
                     <h3>Inteligência:</h3>
-                    <input type="number" class="campos_preenchimento_numero" id="campo_inteligencia_personagem">
+                    <input type="number" class="campos_preenchimento_numero" id="campo_inteligencia_personagem" >
                 </div>
                 <div class="campo_numero">
                     <h3>Vitalidade:</h3>
-                    <input type="number" class="campos_preenchimento_numero" id="campo_vitalidade_personagem">
+                    <input type="number" class="campos_preenchimento_numero" id="campo_vitalidade_personagem" >
                 </div>
             </div>
             <br><br>
             <div class="atributos">
                 <div class="campo_numero">
                     <h3>Resistência:</h3>
-                    <input type="number" class="campos_preenchimento_numero" id="campo_resistencia_personagem">
+                    <input type="number" class="campos_preenchimento_numero" id="campo_resistencia_personagem" >
                 </div>
                 <div class="campo_numero">
                     <h3>Afinidade Mágica:</h3>
@@ -60,17 +60,54 @@
                 </div>
             </div>
         </div>
+        <br><br>
+        <button type="submit" onclick="enviar()" name="enviar">Enviar</button>
+        <br><br>
+        <button type="reset" onclick="resetar()" name="resetar">Resetar</button>
     </form>
-    <br><br>
-    <button type="submit" name="enviar">Enviar</button>
-    <br><br>
-    <button type="reset" onclick="resetar()" name="resetar">Resetar</button>
+
 
     <script>
+        var formulario = document.getElementById('criacao_personagem');
+
         function resetar() {
-            var formulario = document.getElementById('criacao_personagem');
             formulario.reset()
         }
+
+        function enviar() {
+            formulario.submit()
+        }
+
+        let formularioPersonagem = document.getElementById('criacao_personagem')
+
+        formularioPersonagem.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            let nomePersonagem = document.getElementById('campo_nome_personagem');
+            let nomeJogador = document.getElementById('campo_nome_jogador');
+            let personagemForca = document.getElementById('campo_forca_personagem');
+            let personagemHabilidade = document.getElementById('campo_habilidade_personagem');
+            let personagemInteligencia = document.getElementById('campo_inteligencia_personagem');
+            let personagemVitalidade  = document.getElementById('campo_vitalidade_personagem');
+            let personagemResistencia  = document.getElementById('campo_resistencia_personagem');
+            let personagemAfinidade = document.getElementById('campo_afinidade_personagem');
+
+            if (nomePersonagem.value == "" || nomeJogador.value == "" || personagemForca.value == "" || personagemHabilidade.value == "" || personagemInteligencia.value == "" || personagemResistencia.value == "" || personagemAfinidade.value == "" || personagemVitalidade.value == "") {
+                alert('Por favor, complete todos os campos!');
+            } else {
+                alert('Personagem criado!');
+
+                nomePersonagem.value = "";
+                nomeJogador.value = "";
+                personagemForca.value = "";
+                personagemHabilidade.value = "";
+                personagemInteligencia.value = "";
+                personagemVitalidade.value = "";
+                personagemResistencia.value = "";
+                personagemAfinidade.value = "";
+
+            }
+        });
     </script>
 
 </body> 
