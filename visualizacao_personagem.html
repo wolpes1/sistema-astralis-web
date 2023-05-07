@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualização de Personagem - Sistema Astralis RPG</title>
+    <link rel="stylesheet" href="estilo_visualizacao_personagem.css">
+</head>
+<body>
+    <span class="cabecalho">
+        <button onclick="location.href='index.html'" id="voltar">Voltar</button>
+        <h1 class="campo_texto_titulo" id="titulo">Visualização de Personagem</h1>
+    </span>
+    <br>
+    <br>
+    <span id="nomes">
+        <div class="campo_texto_longo">
+            <h2>Nome do Personagem:</h2>
+            <h2 id="nome_personagem">Nenhum</h2>
+        </div>
+        <br>
+        <div class="campo_texto_longo">
+            <h2>Nome do Jogador:</h2>
+            <h2 id="nome_jogador">Nenhum</h2>
+        </div>
+    </span>
+    <br>
+    <span id="vida_mana_inic">
+        <div class="campo_texto_vida">
+            <h2>Pontos de Vida:</h2>
+            <h2 id="pontos_vida">0</h2>
+        </div>
+        <br>
+        <div class="campo_texto_vida">
+            <h2>Pontos de Mana:</h2>
+            <h2 id="pontos_mana">0</h2>
+        </div>
+        <br>
+        <div class="campo_texto_vida" id="iniciativa">
+            <h2>Bonus de Iniciativa:</h2>
+            <h2 id="bonus_iniciativa">0</h2>
+        </div>
+    </span>
+    <br>
+    <div class="campo_texto_titulo">
+        <h2>Atributos:</h2>
+    </div>
+    <br>
+    <span class="atributos">
+        <div class="campo_texto_atributo">
+            <h2>Força:</h2>
+            <h2 id="pontos_for">0</h2>
+        </div>
+        <br>
+        <div class="campo_texto_atributo">
+            <h2>Habilidade:</h2>
+            <h2 id="pontos_hab">0</h2>
+        </div>
+        <br>
+        <div class="campo_texto_atributo">
+            <h2>Inteligência:</h2>
+            <h2 id="pontos_int">0</h2>
+        </div>
+    </span>
+    <br>
+    <span class="atributos">
+        <div class="campo_texto_atributo">
+            <h2>Vitalidade:</h2>
+            <h2 id="pontos_vit">0</h2>
+        </div>
+        <br>
+        <div class="campo_texto_atributo">
+            <h2>Resistência:</h2>
+            <h2 id="pontos_res">0</h2>
+        </div>
+        <br>
+        <div class="campo_texto_atributo" id="afinidade_magica">
+            <h2>Afinidade Mágica:</h2>
+            <h2 id="pontos_afi">0</h2>
+        </div>
+    </span>
+    <br>
+    <div class="campo_texto_titulo">
+        <h2>Perícias:</h2>
+    </div>
+    <br>
+    <span class="pericias">
+        <div class="campo_texto_pericia">
+            <h2>Luta (For):</h2>
+            <h2>Treino:</h2>
+            <h2 id="treino_luta">Não</h2>
+            <h2>Total:</h2>
+            <h2 id="pontos_luta">0</h2>
+        </div>
+        <br>
+        <div class="campo_texto_pericia">
+            <h2>Mira (Hab):</h2>
+            <h2>Treino:</h2>
+            <h2 id="treino_mira">Não</h2>
+            <h2>Total:</h2>
+            <h2 id="pontos_mira">0</h2>
+        </div>
+        <br>
+        <div class="campo_texto_pericia">
+            <h2>Furtividade (Hab):</h2>
+            <h2>Treino:</h2>
+            <h2 id="treino_furt">Não</h2>
+            <h2>Total:</h2>
+            <h2 id="pontos_furt">0</h2>
+        </div>
+    </span>
+    <br>
+    <span class="pericias">
+        <div class="campo_texto_pericia">
+            <h2>Persuasão (Hab):</h2>
+            <h2>Treino:</h2>
+            <h2 id="treino_pers">Não</h2>
+            <h2>Total:</h2>
+            <h2 id="pontos_pers">0</h2>
+        </div>
+        <br>
+        <div class="campo_texto_pericia">
+            <h2>Atletismo (Res):</h2>
+            <h2>Treino:</h2>
+            <h2 id="treino_atle">Não</h2>
+            <h2>Total:</h2>
+            <h2 id="pontos_atle">0</h2>
+        </div>
+        <br>
+        <div class="campo_texto_pericia">
+            <h2>Sobrevivência (Res):</h2>
+            <h2>Treino:</h2>
+            <h2 id="treino_sobr">Não</h2>
+            <h2>Total:</h2>
+            <h2 id="pontos_sobr">0</h2>
+        </div>
+    </span>
+    <br>
+    <span class="pericias">
+        <div class="campo_texto_pericia">
+            <h2>Conhecimentos (Int):</h2>
+            <h2>Treino:</h2>
+            <h2 id="treino_conh">Não</h2>
+            <h2>Total:</h2>
+            <h2 id="pontos_conh">0</h2>
+        </div>
+        <br>
+        <div class="campo_texto_pericia">
+            <h2>Comunicação (Int):</h2>
+            <h2>Treino:</h2>
+            <h2 id="treino_comu">Não</h2>
+            <h2>Total:</h2>
+            <h2 id="pontos_comu">0</h2>
+        </div>
+        <br>
+        <div class="campo_texto_pericia">
+            <h2>Investigação (Int):</h2>
+            <h2>Treino:</h2>
+            <h2 id="treino_inve">Não</h2>
+            <h2>Total:</h2>
+            <h2 id="pontos_inve">0</h2>
+        </div>
+    </span>
+    <br>
+    <span class="pericias">
+        <div class="campo_texto_pericia">
+            <h2>Magias de Dano (A.M.):</h2>
+            <h2>Treino:</h2>
+            <h2 id="treino_dano">Não</h2>
+            <h2>Total:</h2>
+            <h2 id="pontos_dano">0</h2>
+        </div>
+        <br>
+        <div class="campo_texto_pericia">
+            <h2>Magias de Auxílio (A.M.):</h2>
+            <h2>Treino:</h2>
+            <h2 id="treino_auxi">Não</h2>
+            <h2>Total:</h2>
+            <h2 id="pontos_auxi">0</h2>
+        </div>
+    </span>
+    
+		
+</body>
+</html>

@@ -96,6 +96,27 @@ button:active{
 }
 
 #opcoes #voltar{
-    position: absolute;
-    
+    position: absolute;   
+}
+
+.campo_checkbox{
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    background-color: brown;
+    border-style: hidden;
+    border-radius: 0.4em;
+    height: 2em;
+    width: 13em;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 0;
+    margin:5px 3px;
+    color: burlywood;
+}
+
+.pericias{
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
 }
