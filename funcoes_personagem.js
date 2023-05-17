@@ -2,13 +2,15 @@ var formulario = document.getElementById('criacao_personagem');
 
 function resetar() {
     formulario.reset()
-}
+};
 
 function enviar() {
     formulario.submit()
-}
+};
 
-let formularioPersonagem = document.getElementById('criacao_personagem')
+let formularioPersonagem = document.getElementById('criacao_personagem');
+
+//armazenamento das informações do formulário
 
 formularioPersonagem.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -21,6 +23,8 @@ formularioPersonagem.addEventListener("submit", (e) => {
     let personagemVitalidade  = document.getElementById('campo_vitalidade_personagem');
     let personagemResistencia  = document.getElementById('campo_resistencia_personagem');
     let personagemAfinidade = document.getElementById('campo_afinidade_personagem');
+
+    //condições para erro
 
     if (nomePersonagem.value == "" || nomeJogador.value == "" || personagemForca.value == "" || personagemHabilidade.value == "" || personagemInteligencia.value == "" || personagemResistencia.value == "" || personagemAfinidade.value == "" || personagemVitalidade.value == "") {
         alert('Por favor, complete todos os campos!');
@@ -36,5 +40,5 @@ formularioPersonagem.addEventListener("submit", (e) => {
         personagemResistencia.value = "";
         personagemAfinidade.value = "";
 
-    }
+    };
 });
