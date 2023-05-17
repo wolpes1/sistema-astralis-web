@@ -13,12 +13,14 @@ body{
 
 #voltar{
     position: absolute;
+    vertical-align: bottom  ;
 }
 
 #titulo{
     display: flex;
     justify-content: center;
-    margin: 0 auto;
+    vertical-align: bottom;
+    margin: 15px auto 0;
     border-radius: 10px;
     color: burlywood;
     background-color: brown;
