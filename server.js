@@ -1,16 +1,16 @@
-const mysql = require('mysql');
+let bancoDeDados = require('mysql');
 
-let db_connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: ''
+let conexao = bancoDeDados.createConnection({
+    host: "localhost",
+    user: "wolpes",
+    password: "bancodedados"
 });
 
-db_connection.connect((err) => {
-    if (error) {
-        console.log("Conexão mal sucedida.", err);
-    } else {
-        console.log('Conexão bem sucedida.');
-    }
+conexao.connect(function(err) {
+    if (err) throw err;
+    console.log('Conectado.');
+    conexao.query("CREATE DATABASE bancodedados", function (err,result) {
+        if (err) throw err;
+        console.log("Banco de dados criado.");
+    });
 });
-
